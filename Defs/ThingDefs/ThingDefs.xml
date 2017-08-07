@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ThingDefs>
+
+	<ThingDef Name="FLG_FlagBase" ParentName="BuildingBase" Abstract="True">
+    <thingClass>CuproFlags.Building_Flag</thingClass>
+    <description>A decorative flag for marking areas or displaying heraldry.</description>
+    <graphicData>
+      <texPath>Cupro/Object/Utility/Flags/White/MenuIcon</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(3,3)</drawSize>
+    </graphicData>
+		<size>(1,1)</size>
+    <altitudeLayer>PawnUnused</altitudeLayer>
+    <statBases>
+      <MaxHitPoints>75</MaxHitPoints>
+      <WorkToBuild>500</WorkToBuild>
+      <Flammability>1.0</Flammability>
+      <Beauty>20</Beauty>
+    </statBases>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <fillPercent>0.15</fillPercent>
+		<building>
+			<ai_chillDestination>false</ai_chillDestination>
+		</building>
+    <designationCategory>Flags</designationCategory>
+    <rotatable>true</rotatable>
+		<tickerType>Normal</tickerType>
+    <placeWorkers>
+			<li>PlaceWorker_NotUnderRoof</li>
+    </placeWorkers>
+  </ThingDef>
+
+  <ThingDef Name="FLG_UndyedFlagBase" ParentName="FLG_FlagBase" Abstract="True">
+    <stuffCategories>
+			<li>Fabric</li>
+			<li>Leathery</li>
+		</stuffCategories>
+    <costStuffCount>15</costStuffCount>
+    <costList>
+      <Steel>15</Steel>
+    </costList>
+  </ThingDef>
+
+  <ThingDef Name="FLG_DyedFlagBase" ParentName="FLG_FlagBase" Abstract="True">
+    <costList>
+      <Steel>15</Steel>
+			<Cloth>15</Cloth>
+    </costList>
+  </ThingDef>
+
+
+
+  <ThingDef ParentName="FLG_UndyedFlagBase" >
+    <defName>FLG_Flag_Undyed</defName>
+    <label>undyed flag</label>
+    <graphicData>
+      <texPath>Cupro/Object/Utility/Flags/White/MenuIcon</texPath>
+    </graphicData>
+  </ThingDef>
+
+	<ThingDef ParentName="FLG_DyedFlagBase" >
+    <defName>FLG_Flag_White</defName>
+    <label>white flag</label>
+  </ThingDef>
+
+  <ThingDef ParentName="FLG_DyedFlagBase" >
+    <defName>FLG_Flag_Black</defName>
+    <label>black flag</label>
+    <graphicData>
+      <color>(38,38,38)</color>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="FLG_DyedFlagBase" >
+    <defName>FLG_Flag_Magenta</defName>
+    <label>magenta flag</label>
+    <graphicData>
+      <color>(168,24,168)</color>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="FLG_DyedFlagBase" >
+    <defName>FLG_Flag_Violet</defName>
+    <label>violet flag</label>
+    <graphicData>
+      <color>(116,24,168)</color>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="FLG_DyedFlagBase" >
+    <defName>FLG_Flag_Blue</defName>
+    <label>blue flag</label>
+    <graphicData>
+      <color>(24,58,168)</color>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="FLG_DyedFlagBase" >
+    <defName>FLG_Flag_Cyan</defName>
+    <label>cyan flag</label>
+    <graphicData>
+      <color>(23,128,167)</color>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="FLG_DyedFlagBase" >
+    <defName>FLG_Flag_Green</defName>
+    <label>green flag</label>
+    <graphicData>
+      <color>(17,119,48)</color>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="FLG_DyedFlagBase" >
+    <defName>FLG_Flag_Chartreuse</defName>
+    <label>chartreuse flag</label>
+    <graphicData>
+      <color>(95,168,24)</color>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="FLG_DyedFlagBase" >
+    <defName>FLG_Flag_Yellow</defName>
+    <label>yellow flag</label>
+    <graphicData>
+      <color>(171,163,25)</color>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="FLG_DyedFlagBase" >
+    <defName>FLG_Flag_Orange</defName>
+    <label>orange flag</label>
+    <graphicData>
+      <color>(191,120,27)</color>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="FLG_DyedFlagBase" >
+    <defName>FLG_Flag_Brown</defName>
+    <label>brown flag</label>
+    <graphicData>
+      <color>(67,44,21)</color>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="FLG_DyedFlagBase" >
+    <defName>FLG_Flag_Red</defName>
+    <label>red flag</label>
+    <graphicData>
+      <color>(168,24,24)</color>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="FLG_DyedFlagBase" >
+    <defName>FLG_Flag_Pink</defName>
+    <label>pink flag</label>
+    <graphicData>
+      <color>(255,192,203)</color>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="FLG_UndyedFlagBase" >
+    <defName>FLG_Flag_RimWorld</defName>
+    <label>RimWorld flag</label>
+    <graphicData>
+      <texPath>Cupro/Object/Utility/Flags/RimWorld/MenuIcon</texPath>
+      <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+  </ThingDef>
+
+</ThingDefs>

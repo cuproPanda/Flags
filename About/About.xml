@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>Flags - Core</name>
+	<author>cuproPanda</author>
+  <url>https://ludeon.com/forums/index.php?topic=32190</url>
+	<targetVersion>0.17.0</targetVersion>
+	<description>Adds decorative flags for marking areas or displaying heraldry.\n\nThis is the core mod, and does not add additional logos from Patreon rewards.</description>
+</ModMetaData>
