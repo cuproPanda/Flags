@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Building - passive -->
+
+  <JoyGiverDef Name="FLG_FlagJoyBase">
+    <defName>FLG_PatrioticTowardsFlag</defName>
+    <giverClass>JoyGiver_WatchBuilding</giverClass>
+    <baseChance>0.5</baseChance>
+    <canDoWhileInBed>false</canDoWhileInBed>
+    <thingDefs>
+      <li>FLG_Flag_RimWorld</li>
+    </thingDefs>
+    <jobDef>FLG_PatrioticTowardsFlag</jobDef>
+    <desireSit>false</desireSit>
+    <joyKind>Passive</joyKind>
+    <requiredCapacities>
+      <li>Sight</li>
+    </requiredCapacities>
+  </JoyGiverDef>
+
+  <JoyGiverDef ParentName="FLG_FlagJoyBase">
+    <defName>FLG_ViewFlag</defName>
+    <baseChance>1</baseChance>
+    <canDoWhileInBed>true</canDoWhileInBed>
+    <thingDefs>
+      <li>FLG_Flag_Undyed</li>
+      <li>FLG_Flag_White</li>
+      <li>FLG_Flag_Black</li>
+      <li>FLG_Flag_Magenta</li>
+      <li>FLG_Flag_Violet</li>
+      <li>FLG_Flag_Blue</li>
+      <li>FLG_Flag_Cyan</li>
+      <li>FLG_Flag_Green</li>
+      <li>FLG_Flag_Chartreuse</li>
+      <li>FLG_Flag_Yellow</li>
+      <li>FLG_Flag_Orange</li>
+      <li>FLG_Flag_Brown</li>
+      <li>FLG_Flag_Red</li>
+      <li>FLG_Flag_Pink</li>
+    </thingDefs>
+    <jobDef>FLG_ViewFlag</jobDef>
+  </JoyGiverDef>
+  
+</Defs>

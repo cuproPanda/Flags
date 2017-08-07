@@ -1,10 +1,7 @@
-﻿using System.Linq;
-using System.IO;
+﻿using System.IO;
 
 using UnityEngine;
-using RimWorld;
 using Verse;
-using System.Collections.Generic;
 
 namespace CuproFlags {
 	[StaticConstructorOnStartup]
@@ -16,6 +13,7 @@ namespace CuproFlags {
 		private Graphic currFrame;
 		private int frameLerp = 0;
 		private string wd;
+		private bool cutout;
 		private bool updated;
 		private int swayTicks = 10;
 
@@ -40,16 +38,25 @@ namespace CuproFlags {
 
 		public override void SpawnSetup(Map map, bool respawningAfterLoad) {
 			base.SpawnSetup(map, respawningAfterLoad);
-			wd = Path.GetDirectoryName(Graphic.data.texPath);
+			wd = Path.GetDirectoryName(def.graphicData.texPath);
 			LongEventHandler.ExecuteWhenFinished(GetGraphicArray);
 		}
 
 
 		public void GetGraphicArray() {
+			cutout = def.graphicData.shaderType == ShaderType.CutoutComplex;
 			animFrames = new Graphic_Single[5];
-			for (int i = 0; i < 5; i++) {
-				animFrames[i] = GraphicDatabase.Get<Graphic_Single>($"{wd}/Anim{i}", ShaderDatabase.ShaderFromType(def.graphicData.shaderType), new Vector2(3, 3), Color.white);
+			if (cutout) {
+				for (int i = 0; i < 5; i++) {
+					animFrames[i] = GraphicDatabase.Get<Graphic_Single>($"{wd}/Anim{i}", ShaderDatabase.CutoutComplex, new Vector2(3, 3), Color.white);
+				}
 			}
+			else {
+				for (int i = 0; i < 5; i++) {
+					animFrames[i] = GraphicDatabase.Get<Graphic_Single>($"{wd}/Anim{i}", ShaderDatabase.DefaultShader, new Vector2(3, 3), Color.white);
+				}
+			}
+			
 			currFrame = animFrames[Rand.Range(0,5)];
 			updated = true;
 		}

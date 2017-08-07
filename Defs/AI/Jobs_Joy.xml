@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <JobDef Name="FLG_FlagJobBase">
+    <defName>FLG_PatrioticTowardsFlag</defName>
+    <driverClass>JobDriver_WatchBuilding</driverClass>
+    <reportString>being patriotic towards TargetA.</reportString>
+    <joyDuration>1000</joyDuration>
+    <joyMaxParticipants>8</joyMaxParticipants>
+    <joyGainRate>1.3</joyGainRate>
+    <joyKind>Passive</joyKind>
+  </JobDef>
+
+  <JobDef ParentName="FLG_FlagJobBase">
+    <defName>FLG_ViewFlag</defName>
+    <reportString>viewing TargetA.</reportString>
+    <joyGainRate>0.8</joyGainRate>
+  </JobDef>
+  
+</Defs>

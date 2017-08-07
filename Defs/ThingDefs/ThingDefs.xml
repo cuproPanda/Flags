@@ -11,23 +11,36 @@
     </graphicData>
 		<size>(1,1)</size>
     <altitudeLayer>PawnUnused</altitudeLayer>
+    <socialPropernessMatters>true</socialPropernessMatters>
     <statBases>
       <MaxHitPoints>75</MaxHitPoints>
       <WorkToBuild>500</WorkToBuild>
       <Flammability>1.0</Flammability>
       <Beauty>20</Beauty>
+      <EntertainmentStrengthFactor>1</EntertainmentStrengthFactor>
     </statBases>
     <drawerType>MapMeshAndRealTime</drawerType>
     <fillPercent>0.15</fillPercent>
 		<building>
+      <isJoySource>true</isJoySource>
 			<ai_chillDestination>false</ai_chillDestination>
-		</building>
+      <watchBuildingStandDistanceRange>
+        <min>1</min>
+        <max>5</max>
+      </watchBuildingStandDistanceRange>
+			<watchBuildingStandRectWidth>3</watchBuildingStandRectWidth>
+    </building>
     <designationCategory>Flags</designationCategory>
-    <rotatable>true</rotatable>
+    <rotatable>false</rotatable>
 		<tickerType>Normal</tickerType>
     <placeWorkers>
 			<li>PlaceWorker_NotUnderRoof</li>
     </placeWorkers>
+		<comps>
+			<li Class="CompProperties_RoomIdentifier">
+				<roomStat>Impressiveness</roomStat>
+			</li>
+		</comps>
   </ThingDef>
 
   <ThingDef Name="FLG_UndyedFlagBase" ParentName="FLG_FlagBase" Abstract="True">
