@@ -172,6 +172,14 @@
     </graphicData>
   </ThingDef>
 
+  <ThingDef ParentName="FLG_DyedFlagBase" >
+    <defName>FLG_Flag_Rainbow</defName>
+    <label>rainbow flag</label>
+    <graphicData>
+      <texPath>Cupro/Object/Utility/Flags/Rainbow/MenuIcon</texPath>
+    </graphicData>
+  </ThingDef>
+
   <ThingDef ParentName="FLG_UndyedFlagBase" >
     <defName>FLG_Flag_RimWorld</defName>
     <label>RimWorld flag</label>
