@@ -16,6 +16,7 @@ namespace CuproFlags {
 		private bool cutout;
 		private bool updated;
 		private int swayTicks = 10;
+		private WindManager windMan;
 
 		public override Graphic Graphic {
 			get {
@@ -39,6 +40,7 @@ namespace CuproFlags {
 		public override void SpawnSetup(Map map, bool respawningAfterLoad) {
 			base.SpawnSetup(map, respawningAfterLoad);
 			wd = Path.GetDirectoryName(def.graphicData.texPath);
+			windMan = Map.windManager;
 			LongEventHandler.ExecuteWhenFinished(GetGraphicArray);
 		}
 
@@ -74,7 +76,15 @@ namespace CuproFlags {
 			}
 
 			if (this.IsHashIntervalTick(60)) {
-				swayTicks = (int)GenMath.LerpDouble(0.3f, 1.5f, 15f, 5f, Map.windManager.WindSpeed);
+				if (windMan.WindSpeed >= 1.2f) {
+					swayTicks = 5;
+				}
+				else if (windMan.WindSpeed >= 0.8f) {
+					swayTicks = 10;
+				}
+				else {
+					swayTicks = 15;
+				}
 			}
 		}
 

@@ -38,6 +38,7 @@
       <li>FLG_Flag_Brown</li>
       <li>FLG_Flag_Red</li>
       <li>FLG_Flag_Pink</li>
+      <li>FLG_Flag_Rainbow</li>
     </thingDefs>
     <jobDef>FLG_ViewFlag</jobDef>
   </JoyGiverDef>
