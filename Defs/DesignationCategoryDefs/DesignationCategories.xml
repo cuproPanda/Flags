@@ -2,7 +2,7 @@
 <Defs>
 	
    <DesignationCategoryDef>
-    <DefName>Flags</DefName>
+    <defName>Flags</defName>
     <label>Flags</label>
     <description>Various decorative flags.</description>
     <order>240</order>

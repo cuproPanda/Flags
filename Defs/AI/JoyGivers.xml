@@ -10,6 +10,12 @@
     <canDoWhileInBed>false</canDoWhileInBed>
     <thingDefs>
       <li>FLG_Flag_RimWorld</li>
+      <li>FLG_Flag_Pirate</li>
+      <li>FLG_Flag_Colony</li>
+      <li>FLG_Flag_Tribe</li>
+      <li>FLG_Flag_Love</li>
+      <li>FLG_Flag_Sol</li>
+      <li>FLG_Flag_Lotus</li>
     </thingDefs>
     <jobDef>FLG_PatrioticTowardsFlag</jobDef>
     <desireSit>false</desireSit>

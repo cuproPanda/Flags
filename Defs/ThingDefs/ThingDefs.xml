@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ThingDefs>
+<Defs>
 
 	<ThingDef Name="FLG_FlagBase" ParentName="BuildingBase" Abstract="True">
     <thingClass>CuproFlags.Building_Flag</thingClass>
@@ -189,4 +189,56 @@
     </graphicData>
   </ThingDef>
 
-</ThingDefs>
+  <ThingDef ParentName="FLG_DyedFlagBase" >
+    <defName>FLG_Flag_Pirate</defName>
+    <label>pirate flag</label>
+    <graphicData>
+      <texPath>Cupro/Object/Utility/Flags/Pirate/MenuIcon</texPath>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="FLG_UndyedFlagBase" >
+    <defName>FLG_Flag_Colony</defName>
+    <label>colony flag</label>
+    <graphicData>
+      <texPath>Cupro/Object/Utility/Flags/Colony/MenuIcon</texPath>
+      <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="FLG_UndyedFlagBase" >
+    <defName>FLG_Flag_Tribe</defName>
+    <label>tribe flag</label>
+    <graphicData>
+      <texPath>Cupro/Object/Utility/Flags/Tribe/MenuIcon</texPath>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="FLG_UndyedFlagBase" >
+    <defName>FLG_Flag_Love</defName>
+    <label>love flag</label>
+    <graphicData>
+      <texPath>Cupro/Object/Utility/Flags/Love/MenuIcon</texPath>
+      <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="FLG_UndyedFlagBase" >
+    <defName>FLG_Flag_Sol</defName>
+    <label>sol flag</label>
+    <graphicData>
+      <texPath>Cupro/Object/Utility/Flags/Sol/MenuIcon</texPath>
+      <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="FLG_UndyedFlagBase" >
+    <defName>FLG_Flag_Lotus</defName>
+    <label>lotus flag</label>
+    <graphicData>
+      <texPath>Cupro/Object/Utility/Flags/Lotus/MenuIcon</texPath>
+      <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+  </ThingDef>
+
+</Defs>
